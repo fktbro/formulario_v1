@@ -1,0 +1,28 @@
+*tips js*
+
++ criação basica para formulario atraves do framework JQUERY VALIDATION
+
+1 $(document).ready(function() {    <<< (chama o documento e diz que, assim que todos os campos obrigatorios forem preenchidos, ira verificar se as regras foram seguidas, inicia a matriz principal que engloba todos os campos)
+2     $("formpai").validate({       <<< (chama o formulario pai, dizendo que ele irá ser validado e abre uma matriz para inserir os campos)
+3         rules: {                  <<< (especifica que vai inserir as regras e abre outra matriz para inserir is campos especificos)
+4             nome: {               <<< (especifica o campo a ser validado e abre matriz para inserir as regras da mesma)
+5                 regra1            <<< (especifica a primeira regra)
+6                 regra2            <<< (especifica a segunda regra)
+7             }
+8         }
+9     })
+10 })
+
+
++ criação basica para metodo de validação adicional (recebendo o valor e solicitando um elemento obrigatório)
+
+1 jQuery.validator.addMethod("campoExemplo", function(value, element) (
+2 if (value.indexOf ("valorExemplo") == 0) {
+3     return true
+4 }
+5 else { 
+6     return false
+7 }, "mensagem de erro")
+8 
+9 
+10 
